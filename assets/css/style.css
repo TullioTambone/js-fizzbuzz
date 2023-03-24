@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main{
+    background-color: #083b4c;
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    margin: 20px 0;
+}
+
+#container{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box{
+    flex-basis: calc(100% / 7 - 10px);
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+    box-shadow: 10px 10px 10px#083b4c;
+}
+.fizz-bg-color{
+    background-color: #0cd6a1;
+}
+
+.buzz-bg-color{
+    background-color: #ffd166;
+}
+
+.fizzbuzz-bg-color{
+    background-color: #f0466f;
+}
+
+.normal-bg-color{
+    background-color: #1389b2;
+}

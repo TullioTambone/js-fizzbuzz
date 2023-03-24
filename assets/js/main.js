@@ -5,19 +5,36 @@ Prima di partire a scrivere codice poniamoci qualche domanda:
 Come faccio a sapere se un numero è divisibile per un altro? Abbiamo visto qualcosa di particolare che possiamo usare?
 Consigli del giorno:
 Scriviamo sempre prima dei commenti in italiano per capire cosa vogliamo fare
-Proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
+Proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano".
+
 BONUS 1: Crea un container nel DOM , aggiungendo (attraverso la funzione append()) un elemento html con il numero o la stringa corretta da mostrare.
 BONUS 2: Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz. Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna. */
 
 
+
 for (let i = 1; i <= 100; i++) {
+    const div = document.createElement('div');
+    document.getElementById("container").appendChild(div);
+    
     if (i % 3 === 0 && i % 5 === 0) {
+        div.textContent = 'FizzBuzz';
+        div.setAttribute("class", "box fizzbuzz-bg-color");
         console.log("FizzBuzz");
+
     } else if (i % 3 === 0) {
+        div.textContent = 'Fizz';
+        // div.setAttribute("class", "box fizz-bg-color");
+        div.classList.add("fizz-bg-color", "box");
         console.log("Fizz");
+
     } else if (i % 5 === 0) {
+        div.textContent = 'Buzz';
+        div.setAttribute("class", "box buzz-bg-color");
         console.log("Buzz");
+
     } else {
+        div.textContent = i;
+        div.setAttribute("class", "box normal-bg-color");
         console.log(i);
     }
 }
